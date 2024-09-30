@@ -35,7 +35,7 @@ This function deploys a new Tokenbound Account for an NFT. It requires that the 
 
 - `implementation_hash (felt252)`: The class hash of the reference account (implementation contract).
 - `token_contract (ContractAddress)`: The contract address of the NFT.
-- `token_id (u256)`: The unique ID of the NFT within the contract.
+- `token_id (u256)`: The unique identifier of the NFT within the token contract.
 - `salt (felt252)`: A random value used for the deterministic address calculation.
 - `chain_id (felt252)`: The ID of the blockchain network.
 
