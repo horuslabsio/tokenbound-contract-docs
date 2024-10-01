@@ -29,14 +29,14 @@ fn create_account(
 
 ### Description:
 
-This function deploys a new Tokenbound Account for an NFT. It requires that the caller be the owner of the NFT in question, ensuring that only authorized users can create Tokenbound Accounts.
+This function deploys a new Tokenbound Account for an NFT. It requires that the caller is the owner of the specific NFT, ensuring that only the owner of that NFT can create a Tokenbound Account.
 
 ### Parameters (type):
 
 - `implementation_hash (felt252)`: The class hash of the reference account (implementation contract).
 - `token_contract (ContractAddress)`: The contract address of the NFT.
 - `token_id (u256)`: The unique identifier of the NFT within the token contract.
-- `salt (felt252)`: A random value used for the deterministic address calculation.
+- `salt (felt252)`: A random value that enforces the uniqueness of the deterministic address calculation for the TBA.
 - `chain_id (felt252)`: The ID of the blockchain network.
 
 ### Returns:
@@ -90,7 +90,7 @@ fn _get_owner(
 
 ### Description:
 
-This internal function retrieves the owner of an NFT from its contract. It first tries to use the CamelCase ownerOf function and falls back to the snake_case owner_of function for compatibility with various NFT contracts.
+This internal function retrieves the owner of an NFT from its contract.
 
 ### Parameters (type):
 
@@ -132,4 +132,3 @@ This event is emitted when a new Tokenbound Account is deployed.
 - [ERC-6551](https://github.com/horuslabsio/TBA/blob/v3/README.md#erc-6551-reference-implementation-on-starknet-snip-14): A standard that enables NFTs to have their own smart wallets, allowing them to own assets and interact with decentralized applications.
 - Registry Contract: A smart contract responsible for deploying and managing Tokenbound Accounts and their addresses.
 - Account Address: The unique deterministic address assigned to a Tokenbound Account, based on the NFT's contract address, token ID, and other parameters.
-
