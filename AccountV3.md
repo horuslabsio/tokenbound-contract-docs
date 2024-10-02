@@ -1,5 +1,11 @@
 ## AccountV3
-Account version 3 is a smart contract that creates Token Bound Accounts for NFTs. In addition to the features that existed on the version 2, it has two new features which are the lockable feature that allows to lock and unlock account and permissionable feature respectively.
+Account version 3 is a smart contract that creates Token Bound Accounts for NFTs. In addition to the features that existed on the version 2, the accountv3 has new features that enhances the functionality of the TBA, which enables more secure and seamless transactions on the TokenBound Account.
+
+### Distinct differences between TokenBound AccountV2 and AccountV3
+ The Tokenbound AccountV2 has features that would allow to get account, create account, check account deployment, execute transactions on the TBA, lock account, check if account is_locked, get owner of the TBA, get ownerNft, transferERC20, TransferNFT, and  signer messages.
+
+ The AccountV3 which is an upgraded version of the TBA has a feature that allow for accountV3 implementation,  signitory feature which checks for a valid signer and a valid signature,  executable feature which allows for transaction execution on the TBA, upgradeable feature to be able to upgrade the TBA, lockable feature which allows the account to be locked and unlocked, and  permissionable which enable the owner to allow permissioned addresses to carry out certain functions on its behalf.
+ Each of these features and their functionlities are explained in details below.
 
 ### Functions
 
